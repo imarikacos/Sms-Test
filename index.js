@@ -8,7 +8,7 @@ const app = express();
 
 // Allow only Netlify frontend
 const corsOptions = {
-  origin: 'https://otp254.netlify.app',
+  origin: 'https://relaxed-otter-a0ddde.netlify.app',
   optionsSuccessStatus: 200
 };
 

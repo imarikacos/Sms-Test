@@ -8,7 +8,7 @@ const app = express();
 
 // Allow only Netlify frontend
 const corsOptions = {
-  origin: 'https://moonlit-alpaca-07650f.netlify.app',
+  origin: 'https://celebrated-axolotl-e89c6f.netlify.app',
   optionsSuccessStatus: 200
 };
 

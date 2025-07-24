@@ -8,7 +8,7 @@ const app = express();
 
 // Allow only Netlify frontend
 const corsOptions = {
-  origin: 'https://stellular-cassata-e16e15.netlify.app',
+  origin: 'https://aesthetic-duckanoo-8b7d65.netlify.app',
   optionsSuccessStatus: 200
 };
 

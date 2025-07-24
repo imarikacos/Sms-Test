@@ -13,7 +13,7 @@ app.post('/send-message', async (req, res) => {
 
   try {
     const response = await axios.post(
-      'https://wasage.com/api/send-message',
+      'https://wasage.com/api/whatsapp/send',
       {
         phone,
         message

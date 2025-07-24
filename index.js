@@ -8,14 +8,14 @@ const app = express();
 
 // Allow only Netlify frontend
 const corsOptions = {
-  origin: 'https://celebrated-axolotl-e89c6f.netlify.app',
+  origin: 'https://otp254.netlify.app',
   optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// Send WhatsApp Message using Wasage OTP API
+// Send WhatsApp Message via Wasage OTP API and return full response
 app.post('/send-message', async (req, res) => {
   const { phone, message } = req.body;
 
@@ -37,6 +37,7 @@ app.post('/send-message', async (req, res) => {
       }
     );
 
+    // Return the full response to frontend (e.g. code, QR, URL)
     res.json(response.data);
   } catch (error) {
     res.status(500).json({

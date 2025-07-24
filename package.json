@@ -1,5 +1,5 @@
 {
-  "name": "wasage-backend-with-cors",
+  "name": "wasage-backend-restrict-origin",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

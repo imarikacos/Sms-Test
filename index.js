@@ -4,7 +4,14 @@ const cors = require('cors');
 const axios = require('axios');
 
 const app = express();
-app.use(cors()); // Enable CORS
+
+// Allow only Netlify frontend
+const corsOptions = {
+  origin: 'https://moonlit-alpaca-07650f.netlify.app',
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Send WhatsApp Message
@@ -13,7 +20,7 @@ app.post('/send-message', async (req, res) => {
 
   try {
     const response = await axios.post(
-      'https://wasage.com/api/whatsapp/send',
+      'https://wasage.com/api/send-message',
       {
         phone,
         message
